@@ -19,8 +19,8 @@ Sua trajetória na educação começou cedo: leciona desde a adolescência, quan
     // Official contacts for Teacher Gui
     whatsappNumber: '5512997880714',
     whatsappDisplay: '+55 (12) 99788-0714',
-    instagramHandle: '@teacher.gui',
-    instagramUrl: 'https://instagram.com/teacher.gui',
+    instagramHandle: '@pacheco.guiprof',
+    instagramUrl: 'https://www.instagram.com/pacheco.guiprof/',
     email: 'guimaxpa@gmail.com',
     locationPresencial: 'Aulas online de qualquer lugar ou presenciais sob consulta',
   },

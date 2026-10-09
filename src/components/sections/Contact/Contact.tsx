@@ -115,7 +115,17 @@ export const Contact: React.FC = () => {
                 <BritishFlagIcon className="w-4 h-2.5" />
                 <span>WhatsApp Direto: {siteConfig.contacts.whatsappDisplay}</span>
               </div>
-              <div>Instagram: {siteConfig.contacts.instagramHandle}</div>
+              <div>
+                <a
+                  href={siteConfig.contacts.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-british-camel transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span>Instagram:</span>
+                  <span className="text-white underline underline-offset-2">{siteConfig.contacts.instagramHandle}</span>
+                </a>
+              </div>
               <div>Presencial: {siteConfig.contacts.locationPresencial}</div>
             </div>
           </div>
