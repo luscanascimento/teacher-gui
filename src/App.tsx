@@ -6,6 +6,8 @@ import { Preloader } from './components/sections/Preloader/Preloader';
 import { Hero } from './components/sections/Hero/Hero';
 import { AboutGui } from './components/sections/AboutGui/AboutGui';
 import { ClassFormats } from './components/sections/ClassFormats/ClassFormats';
+import { RealEnglish } from './components/sections/RealEnglish/RealEnglish';
+import { CommonMistakes } from './components/sections/CommonMistakes/CommonMistakes';
 import { useSmoothScroll } from './hooks/useSmoothScroll';
 
 export const App: React.FC = () => {
@@ -20,6 +22,8 @@ export const App: React.FC = () => {
         <Hero />
         <AboutGui />
         <ClassFormats />
+        <RealEnglish />
+        <CommonMistakes />
       </main>
       <Footer />
       <WhatsAppFloatingCTA />
