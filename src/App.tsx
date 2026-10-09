@@ -8,6 +8,8 @@ import { AboutGui } from './components/sections/AboutGui/AboutGui';
 import { ClassFormats } from './components/sections/ClassFormats/ClassFormats';
 import { RealEnglish } from './components/sections/RealEnglish/RealEnglish';
 import { CommonMistakes } from './components/sections/CommonMistakes/CommonMistakes';
+import { BritishCulture } from './components/sections/BritishCulture/BritishCulture';
+import { Pronunciation } from './components/sections/Pronunciation/Pronunciation';
 import { useSmoothScroll } from './hooks/useSmoothScroll';
 
 export const App: React.FC = () => {
@@ -24,6 +26,8 @@ export const App: React.FC = () => {
         <ClassFormats />
         <RealEnglish />
         <CommonMistakes />
+        <BritishCulture />
+        <Pronunciation />
       </main>
       <Footer />
       <WhatsAppFloatingCTA />
