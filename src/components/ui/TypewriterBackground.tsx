@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
-const fullStory = `It was a misty autumn morning in Bloomsbury. The kettle began its soft, familiar whistle on the stove, promising a proper cuppa with a dash of milk. Outside, iconic red double-decker buses rattled past Victorian brick façades, while commuters formed patient, polite queues outside the Tube station. To speak British English is not merely to recite grammar rules from an old textbook; it is to step into an extraordinary rhythm of understatement, gentle irony, warmth, and genuine human connection. As George Orwell once noted, a cup of tea is one of the mainstays of civilisation. From the cobblestones of Covent Garden to the quiet afternoon light of a neighborhood pub, real English lives in the everyday moments where two people sit down, leave their worries behind, and simply start a conversation. "Alright, mate? Let's have a chat."`;
+const fullStory = `It was a crisp, misty autumn morning in Bloomsbury. The heavy iron kettle began its soft, familiar whistle on the stove, promising a proper cuppa with just a generous dash of fresh milk. Outside, iconic crimson double-decker buses rattled past soot-kissed Victorian façades, while Londoners quietly took their places in patient, immaculate queues outside the tube station. To speak British English is never merely about memorizing rigid grammar rules from a dusty textbook; it is about stepping into an extraordinary cadence of understatement, gentle irony, warmth, and heartfelt connection.
+
+As George Orwell once famously observed in his essays, a good cup of tea is one of the essential mainstays of civilisation in this country. From the ancient cobblestones of Covent Garden and the lively bookstalls along the South Bank to the amber-lit windows of a neighbourhood pub by the Thames, real language thrives in the humble moments where two people sit down, leave their hesitations at the door, and simply start a conversation.
+
+Down in the tunnels of the London Underground, the rhythmic chime echoes: "Please mind the gap between the train and the platform." Yet the greatest gap in learning a language has never been between words, but between fear and confidence. The beauty of conversation lies in its imperfections: the hesitation that turns into laughter, the searching for a phrase that leads to a new discovery, the quiet thrill of being genuinely understood by someone across the table.
+
+Across the historic libraries of Oxford, the street vendors of Camden, and the rainy avenues of Westminster, the English tongue has continuously evolved through centuries of poetry, theatre, philosophy, and everyday encounters. Every accent carries history; every idiom tells a story of how people chose to connect. When you learn with genuine human care and patience, grammar stops feeling like an obstacle and becomes an open invitation.
+
+"Fancy a cuppa? Let's have a chat." Because fluency is not a race to sound like a machine; it is the courage to share who you are in another language. Here, with every spoken word, you build confidence, discover nuances of culture, and realise that English is not just a skill to put on a resume—it is a bridge to the wider world, built one honest conversation at a time.`;
 
 export const TypewriterBackground: React.FC = () => {
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
-    // Respect reduced motion: display full text immediately
+    // Respect reduced motion: display full story immediately
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) {
       setDisplayedText(fullStory);
@@ -19,14 +27,10 @@ export const TypewriterBackground: React.FC = () => {
         setDisplayedText(fullStory.slice(0, currentIndex + 1));
         currentIndex++;
       } else {
-        // Pause at the end, then restart smoothly
+        // When finished, keep the text fully visible permanently (do NOT erase quickly!)
         clearInterval(interval);
-        setTimeout(() => {
-          currentIndex = 0;
-          setDisplayedText('');
-        }, 8000);
       }
-    }, 38);
+    }, 22);
 
     return () => clearInterval(interval);
   }, []);
@@ -36,24 +40,19 @@ export const TypewriterBackground: React.FC = () => {
       className="absolute inset-0 pointer-events-none select-none overflow-hidden z-0"
       aria-hidden="true"
     >
-      {/* Typewriter Text Canvas with soft vignette */}
-      <div className="absolute inset-0 p-6 sm:p-12 md:p-16 flex items-start justify-center">
-        <div className="max-w-5xl w-full">
-          <p className="font-mono text-xs sm:text-sm md:text-base leading-relaxed tracking-wider text-british-camel/15 text-justify break-words">
+      {/* Full-width, full-height Typewriter Canvas covering sides, top and bottom */}
+      <div className="absolute inset-0 p-4 sm:p-8 md:p-12 lg:p-16 overflow-hidden">
+        <div className="w-full h-full">
+          <div className="font-mono text-xs sm:text-sm md:text-[15px] leading-relaxed md:leading-loose tracking-wide text-british-camel/15 sm:text-british-camel/20 whitespace-pre-line text-justify break-words">
             {displayedText}
-            <span className="inline-block w-2 sm:w-2.5 h-3.5 sm:h-4 bg-british-camel/40 ml-1 animate-pulse align-middle" />
-          </p>
+            <span className="inline-block w-2 sm:w-2.5 h-3.5 sm:h-4 bg-british-camel/50 ml-1 animate-pulse align-middle" />
+          </div>
         </div>
       </div>
 
-      {/* Soft radial mask to keep center readable and avoid visual noise */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(circle at 50% 25%, transparent 20%, rgba(28, 42, 57, 0.7) 60%, #1C2A39 90%)',
-        }}
-      />
+      {/* Subtle top and bottom fades so it integrates seamlessly with adjacent sections */}
+      <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-british-blue to-transparent pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-british-blue to-transparent pointer-events-none" />
     </div>
   );
 };
