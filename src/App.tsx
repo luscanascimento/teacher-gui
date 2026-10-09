@@ -10,6 +10,8 @@ import { RealEnglish } from './components/sections/RealEnglish/RealEnglish';
 import { CommonMistakes } from './components/sections/CommonMistakes/CommonMistakes';
 import { BritishCulture } from './components/sections/BritishCulture/BritishCulture';
 import { Pronunciation } from './components/sections/Pronunciation/Pronunciation';
+import { LearningJourney } from './components/sections/LearningJourney/LearningJourney';
+import { MiniQuiz } from './components/sections/MiniQuiz/MiniQuiz';
 import { useSmoothScroll } from './hooks/useSmoothScroll';
 
 export const App: React.FC = () => {
@@ -28,6 +30,8 @@ export const App: React.FC = () => {
         <CommonMistakes />
         <BritishCulture />
         <Pronunciation />
+        <LearningJourney />
+        <MiniQuiz />
       </main>
       <Footer />
       <WhatsAppFloatingCTA />
