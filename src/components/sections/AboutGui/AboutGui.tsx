@@ -1,6 +1,6 @@
 import React from 'react';
 import { siteConfig } from '../../../content/site';
-import { Heart, Coffee, Sparkles, MessageCircle, Quote } from 'lucide-react';
+import { Heart, Coffee, Sparkles, MessageCircle, Quote, BookOpen, Brain, Globe, GraduationCap, Clock } from 'lucide-react';
 import { Badge } from '../../ui/Badge';
 import { Button } from '../../ui/Button';
 import { BritishFlagIcon, TeaCupIcon } from '../../ui/Icons';
@@ -21,7 +21,8 @@ export const AboutGui: React.FC = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        {/* Top Part: Portrait & Welcome Card */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-20">
           {/* Left Column: Editorial Scrapbook & Portrait Frame */}
           <div className="lg:col-span-5">
             <div className="relative mx-auto max-w-md lg:max-w-none">
@@ -36,7 +37,7 @@ export const AboutGui: React.FC = () => {
                     <BritishFlagIcon className="w-4 h-2.5" />
                     <span>Teacher Profile</span>
                   </span>
-                  <Badge variant="stamp">British Accent &amp; Culture</Badge>
+                  <Badge variant="stamp">8 Anos de Experiência</Badge>
                 </div>
 
                 {/* Teacher Photo / Stylized Editorial Portrait Placeholder */}
@@ -58,12 +59,12 @@ export const AboutGui: React.FC = () => {
                       <h4 className="font-serif font-bold text-2xl text-british-cream mb-1">
                         {siteConfig.teacher.nickname}
                       </h4>
-                      <p className="text-xs font-mono uppercase tracking-vintage text-british-camel">
+                      <p className="text-xs font-mono uppercase tracking-vintage text-british-camel font-semibold">
                         Guilherme • English Tutor
                       </p>
 
                       <div className="mt-5 pt-4 border-t border-british-cream/20 text-xs text-british-cream/80 max-w-[240px] italic font-serif">
-                        "Ensinar inglês é construir uma ponte de confiança entre duas pessoas."
+                        "Ensinar é construir uma ponte de confiança entre duas pessoas."
                       </div>
                     </>
                   )}
@@ -71,7 +72,7 @@ export const AboutGui: React.FC = () => {
                   {/* Corner Ribbon */}
                   <div className="absolute top-4 right-4 bg-british-red text-british-cream text-[10px] font-mono uppercase tracking-vintage px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1">
                     <TeaCupIcon className="w-3 h-3 text-british-camel" />
-                    <span>Friendly &amp; Warm</span>
+                    <span>Warm &amp; Human</span>
                   </div>
                 </div>
 
@@ -122,7 +123,7 @@ export const AboutGui: React.FC = () => {
                 <Heart className="w-5 h-5 text-british-red mb-2" />
                 <h3 className="font-bold text-sm text-british-blue mb-1">Acolhimento</h3>
                 <p className="text-xs text-british-grey leading-relaxed">
-                  Paciência e atenção ao seu ritmo, sem julgamentos de sotaque.
+                  Paciência e atenção ao seu ritmo, sem qualquer julgamento de sotaque.
                 </p>
               </div>
 
@@ -155,11 +156,141 @@ export const AboutGui: React.FC = () => {
                   <span>Mandar um "Hello" para o Gui</span>
                 </Button>
               </a>
-              <a href="#modalidades">
+              <a href="#trajetoria">
                 <Button variant="ghost" size="md" className="w-full sm:w-auto">
-                  Ver como funcionam as aulas →
+                  Conhecer a trajetória do Gui ↓
                 </Button>
               </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Second Part: Rich Biographical Story & The 8 Years of Teaching */}
+        <div id="trajetoria" className="pt-12 border-t-2 border-british-blue/10">
+          {/* Header of Story */}
+          <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
+            <span className="font-mono text-xs uppercase tracking-vintage text-british-camel font-bold bg-british-camel/15 px-3 py-1 rounded-full border border-british-camel/30">
+              A Trajetória do Professor
+            </span>
+            <h3 className="font-serif font-black text-3xl sm:text-4xl text-british-blue tracking-tight">
+              A paixão por idiomas começou cedo. <br />
+              <span className="italic font-serif text-british-red">E ensinar virou vocação de vida.</span>
+            </h3>
+            <p className="text-base text-british-blue/80 leading-relaxed max-w-2xl mx-auto">
+              Muito antes de se tornar professor profissional, o Gui já vivia cercado por livros, dicionários e letras de músicas britânicas.
+            </p>
+          </div>
+
+          {/* Narrative Editorial Card with The Adolescent Origin & 8 Years */}
+          <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-editorial border border-british-blue/10 mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              <div className="lg:col-span-7 space-y-5 text-british-blue/85 text-base sm:text-lg leading-relaxed">
+                <h4 className="font-serif font-bold text-2xl text-british-blue">
+                  Das primeiras aulas na adolescência a 8 anos dedicados à educação
+                </h4>
+                <p>
+                  O fascínio pelos idiomas não surgiu num cursinho tradicional: <strong className="text-british-blue font-semibold">nasceu na adolescência</strong>, quando o Gui descobriu que cada língua carrega uma forma única de sentir o mundo, fazer piadas e expressar sentimentos.
+                </p>
+                <p>
+                  Ainda muito jovem, começou a dar suas primeiras aulas para amigos e colegas que tinham dificuldade. Percebeu ali algo que carrega até hoje: <span className="italic font-serif text-british-red font-medium">quando você ensina sem soberba e com paciência genuína, o medo do outro desaparece.</span>
+                </p>
+                <p className="text-base text-british-blue/80 bg-british-cream/70 p-4 rounded-xl border-l-4 border-british-camel">
+                  Hoje, com <strong>8 anos de atuação como professor de Inglês, Português, Filosofia e Sociologia</strong>, o Guilherme combina o rigor linguístico com uma sensibilidade humana rara na educação de idiomas.
+                </p>
+              </div>
+
+              {/* Stats & Pillars Box */}
+              <div className="lg:col-span-5 bg-gradient-to-br from-british-blue via-british-blue to-british-blue-dark text-british-cream p-7 sm:p-8 rounded-2xl shadow-xl border border-british-camel/30">
+                <span className="text-xs font-mono uppercase tracking-vintage text-british-camel font-bold block mb-4">
+                  Repertório &amp; Bagagem Docente
+                </span>
+
+                <div className="grid grid-cols-2 gap-4 pb-6 border-b border-british-cream/15">
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-5 h-5 text-british-camel" />
+                      <span className="font-serif font-black text-3xl text-british-cream">8+</span>
+                    </div>
+                    <span className="text-xs text-british-cream/70 font-mono mt-0.5 block">
+                      Anos Lecionando
+                    </span>
+                  </div>
+
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <GraduationCap className="w-5 h-5 text-british-camel" />
+                      <span className="font-serif font-black text-3xl text-british-cream">4</span>
+                    </div>
+                    <span className="text-xs text-british-cream/70 font-mono mt-0.5 block">
+                      Disciplinas Conectadas
+                    </span>
+                  </div>
+                </div>
+
+                <div className="pt-5 space-y-3">
+                  <span className="text-xs font-mono uppercase text-british-camel block">
+                    Por que isso muda a sua aula de inglês?
+                  </span>
+                  <p className="text-xs text-british-cream/80 leading-relaxed">
+                    Você nunca fica preso a diálogos artificiais sobre "comprar pão". As conversas têm conteúdo real, reflexão sobre a vida, cinema, música, sociedade e cultura britânica viva.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 4 Interdisciplinary Strengths Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Pillar 1: English */}
+            <div className="bg-white p-6 rounded-2xl border border-british-blue/10 shadow-xs hover:shadow-card hover:border-british-red/30 transition-all">
+              <div className="w-10 h-10 rounded-xl bg-british-red/10 text-british-red flex items-center justify-center mb-4">
+                <BritishFlagIcon className="w-5 h-3" />
+              </div>
+              <h4 className="font-serif font-bold text-lg text-british-blue mb-2">
+                Inglês Britânico
+              </h4>
+              <p className="text-xs text-british-grey leading-relaxed">
+                Foco no ritmo, pronúncia nítida, expressões coloquiais do Reino Unido e elegância sem formalismos exagerados.
+              </p>
+            </div>
+
+            {/* Pillar 2: Portuguese */}
+            <div className="bg-white p-6 rounded-2xl border border-british-blue/10 shadow-xs hover:shadow-card hover:border-british-camel/40 transition-all">
+              <div className="w-10 h-10 rounded-xl bg-british-camel/15 text-british-camel-dark flex items-center justify-center mb-4">
+                <BookOpen className="w-5 h-5" />
+              </div>
+              <h4 className="font-serif font-bold text-lg text-british-blue mb-2">
+                Língua Portuguesa
+              </h4>
+              <p className="text-xs text-british-grey leading-relaxed">
+                Por dominar nossa língua materna, ele sabe com precisão cirúrgica onde a mente brasileira costuma travar ao formular frases em inglês.
+              </p>
+            </div>
+
+            {/* Pillar 3: Philosophy */}
+            <div className="bg-white p-6 rounded-2xl border border-british-blue/10 shadow-xs hover:shadow-card hover:border-british-blue/30 transition-all">
+              <div className="w-10 h-10 rounded-xl bg-british-blue/10 text-british-blue flex items-center justify-center mb-4">
+                <Brain className="w-5 h-5" />
+              </div>
+              <h4 className="font-serif font-bold text-lg text-british-blue mb-2">
+                Filosofia &amp; Ideias
+              </h4>
+              <p className="text-xs text-british-grey leading-relaxed">
+                Pensamento crítico, argumentação e questionamentos instigantes. Suas conversas em aula ganham profundidade e repertório real.
+              </p>
+            </div>
+
+            {/* Pillar 4: Sociology */}
+            <div className="bg-white p-6 rounded-2xl border border-british-blue/10 shadow-xs hover:shadow-card hover:border-british-red/30 transition-all">
+              <div className="w-10 h-10 rounded-xl bg-british-red/10 text-british-red flex items-center justify-center mb-4">
+                <Globe className="w-5 h-5" />
+              </div>
+              <h4 className="font-serif font-bold text-lg text-british-blue mb-2">
+                Sociologia &amp; Cultura
+              </h4>
+              <p className="text-xs text-british-grey leading-relaxed">
+                Compreensão dos costumes, do humor e das relações sociais britânicas. O idioma ganha contexto vivo e significado.
+              </p>
             </div>
           </div>
         </div>

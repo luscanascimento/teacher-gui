@@ -14,7 +14,7 @@ const contactSchema = z.object({
   name: z.string().min(2, 'Por favor, digite seu nome (mínimo 2 letras)'),
   whatsapp: z
     .string()
-    .min(10, 'Digite um número de WhatsApp válido com DDD (ex: 11999998888)')
+    .min(10, 'Digite um número de WhatsApp válido com DDD (ex: 12997880714)')
     .regex(/^[0-9\s()+-]+$/, 'Apenas números e caracteres de telefone'),
   modality: z.enum(['online', 'presencial'], {
     errorMap: () => ({ message: 'Escolha a modalidade desejada' }),
@@ -192,7 +192,7 @@ export const Contact: React.FC = () => {
                     <input
                       id="form-whatsapp"
                       type="tel"
-                      placeholder="(11) 99999-9999"
+                      placeholder="(12) 99788-0714"
                       {...register('whatsapp')}
                       className={`w-full px-4 py-3 rounded-xl border text-sm font-medium bg-white text-british-blue transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-british-red ${
                         errors.whatsapp ? 'border-red-500 bg-red-50/30' : 'border-british-blue/15'

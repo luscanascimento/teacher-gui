@@ -4,6 +4,7 @@ import { BritishCuriosity } from '../../../types';
 import { Badge } from '../../ui/Badge';
 import { BritishFlagIcon, LondonUndergroundRoundel, TeaCupIcon } from '../../ui/Icons';
 import { Sparkles } from 'lucide-react';
+import { TypewriterBackground } from '../../ui/TypewriterBackground';
 
 const categories: ('All' | BritishCuriosity['category'])[] = [
   'All',
@@ -27,6 +28,9 @@ export const BritishCulture: React.FC = () => {
       className="py-24 sm:py-32 bg-british-blue text-british-cream relative overflow-hidden"
       aria-label="Cultura e curiosidades britânicas"
     >
+      {/* Live typing background behind the section */}
+      <TypewriterBackground />
+
       {/* Decorative background geometry */}
       <div className="absolute inset-0 opacity-5 pointer-events-none bg-parchment-pattern" />
       <div

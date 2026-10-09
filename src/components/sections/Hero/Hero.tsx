@@ -4,6 +4,7 @@ import { ArrowDown, MessageSquare, Sparkles, CheckCircle2, RefreshCw } from 'luc
 import { Button } from '../../ui/Button';
 import { Badge } from '../../ui/Badge';
 import { BritishFlagIcon, TeaCupIcon } from '../../ui/Icons';
+import { WavingBritishFlag } from '../../ui/WavingBritishFlag';
 
 const naturalResponses = [
   {
@@ -127,15 +128,20 @@ export const Hero: React.FC = () => {
               <Badge variant="stamp">Aulas Online &amp; Presenciais</Badge>
             </div>
 
-            {/* Main Headline */}
-            <div className="space-y-3">
-              <h1
-                ref={titleRef}
-                className="font-serif font-black text-4xl sm:text-6xl xl:text-7xl tracking-tight leading-[1.08] text-british-cream text-balance"
-              >
-                Your English <br />
-                <span className="italic font-serif text-british-camel">starts here.</span>
-              </h1>
+            {/* Main Headline with Waving British Flag */}
+            <div className="space-y-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <h1
+                  ref={titleRef}
+                  className="font-serif font-black text-4xl sm:text-6xl xl:text-7xl tracking-tight leading-[1.08] text-british-cream text-balance"
+                >
+                  Your English <br />
+                  <span className="italic font-serif text-british-camel">starts here.</span>
+                </h1>
+                <div className="hero-fade-in shrink-0 mt-2 sm:mt-0 filter drop-shadow-xl hover:scale-105 transition-transform">
+                  <WavingBritishFlag size="md" />
+                </div>
+              </div>
               <p className="hero-fade-in text-lg sm:text-xl text-british-cream/90 font-medium leading-relaxed max-w-xl">
                 Você não precisa saber todas as palavras para começar a conversar. Precisa de confiança, prática e alguém que te ajude pelo caminho.
               </p>
