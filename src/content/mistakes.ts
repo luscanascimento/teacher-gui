@@ -1,0 +1,58 @@
+import { CommonMistake } from '../types';
+
+export const commonMistakes: CommonMistake[] = [
+  {
+    id: 'age',
+    category: 'Gramática & Idade',
+    incorrect: 'I have 25 years.',
+    correct: "I'm 25 years old.",
+    translationOrContext: 'Falando sobre a sua idade',
+    explanation: 'Em inglês, a gente não "tem" anos como no português. Nós "somos" a nossa idade! Por isso, usamos o verbo to be: I am (I\'m) 25 years old ou simplesmente I\'m 25.',
+    tip: 'Lembre-se: I am 25. Nunca use "have" para idade!',
+  },
+  {
+    id: 'question',
+    category: 'Vocabulário & Dúvidas',
+    incorrect: "I'm with a doubt.",
+    correct: 'I have a question.',
+    translationOrContext: 'Quando você quer tirar uma dúvida',
+    explanation: 'Em português dizemos "estou com uma dúvida". Em inglês, "doubt" é usado para desconfiança ou incerteza profunda ("I doubt that"). Para tirar uma dúvida comum, a expressão natural é "I have a question".',
+    tip: 'Quer perguntar algo? Diga: "Teacher, I have a quick question!"',
+  },
+  {
+    id: 'actually',
+    category: 'Falsos Cognatos',
+    incorrect: 'Actually, I work from home. (achando que significa atualmente)',
+    correct: 'Actually = Na verdade | Currently = Atualmente',
+    translationOrContext: '"Actually" vs "Currently"',
+    explanation: '"Actually" parece "atualmente", mas significa "na verdade" ou "para falar a verdade"! Se você quiser dizer "atualmente" ou "hoje em dia", use "currently", "at the moment" ou "nowadays".',
+    tip: '"Actually, I prefer tea!" (Na verdade, eu prefiro chá!)',
+  },
+  {
+    id: 'saudade',
+    category: 'Expressões Culturais',
+    incorrect: 'I have saudade of you.',
+    correct: 'I miss you so much.',
+    translationOrContext: 'Como expressar a famosa "saudade"',
+    explanation: 'Dizem que saudade só existe em português, mas o sentimento é universal! Em inglês usamos o verbo "to miss": "I miss you" (sinto sua falta) ou "I miss my family".',
+    tip: 'Para saudade de um lugar ou comida: "I miss homemade food!"',
+  },
+  {
+    id: 'sense',
+    category: 'Collocations (Combinações)',
+    incorrect: 'This has sense.',
+    correct: 'This makes sense.',
+    translationOrContext: 'Quando algo faz todo o sentido',
+    explanation: 'Em inglês, ideias não "têm" sentido, elas "fazem" sentido com o verbo "make". O oposto também é super comum: "That doesn\'t make any sense".',
+    tip: 'Para concordar: "Yeah, that makes total sense!"',
+  },
+  {
+    id: 'series',
+    category: 'Verbos de Percepção',
+    incorrect: "I'm seeing a series on Netflix.",
+    correct: "I'm watching a series on Netflix.",
+    translationOrContext: 'Assistindo à sua série favorita',
+    explanation: 'Usamos "see" para ver algo de passagem ou encontrar alguém. Para assistir a telas, filmes, séries ou jogos com atenção contínua, o verbo correto é sempre "watch".',
+    tip: '"What are you watching right now?" (O que você está assistindo agora?)',
+  },
+];
