@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Header } from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { WhatsAppFloatingCTA } from './components/layout/WhatsAppFloatingCTA';
+import { LondonTubeTracker } from './components/layout/LondonTubeTracker';
 import { Preloader } from './components/sections/Preloader/Preloader';
 import { Hero } from './components/sections/Hero/Hero';
 import { AboutGui } from './components/sections/AboutGui/AboutGui';
@@ -16,15 +17,18 @@ import { Benefits } from './components/sections/Benefits/Benefits';
 import { FAQ } from './components/sections/FAQ/FAQ';
 import { Contact } from './components/sections/Contact/Contact';
 import { useSmoothScroll } from './hooks/useSmoothScroll';
+import { useScrollAnimations } from './hooks/useScrollAnimations';
 
 export const App: React.FC = () => {
   const [preloaderDone, setPreloaderDone] = useState(false);
   useSmoothScroll();
+  useScrollAnimations();
 
   return (
     <div className="min-h-screen flex flex-col bg-british-cream text-british-blue antialiased selection:bg-british-red selection:text-british-cream">
       {!preloaderDone && <Preloader onComplete={() => setPreloaderDone(true)} />}
       <Header />
+      <LondonTubeTracker />
       <main className="flex-1">
         <Hero />
         <AboutGui />
