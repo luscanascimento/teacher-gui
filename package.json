@@ -4,8 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "predev": "cp index.template.html index.html 2>/dev/null || true",
     "dev": "vite",
-    "build": "tsc && vite build && mkdir -p docs && cp -r dist/* docs/ && cp public/.nojekyll docs/ 2>/dev/null || true",
+    "prebuild": "cp index.template.html index.html 2>/dev/null || true",
+    "build": "tsc && vite build && cp dist/index.html ./index.html && cp -r dist/assets . && cp dist/index.html ./404.html && cp public/.nojekyll . 2>/dev/null || true && mkdir -p docs && cp -r dist/* docs/ && cp public/.nojekyll docs/ 2>/dev/null || true",
     "preview": "vite preview",
     "lint": "tsc --noEmit"
   },
