@@ -12,6 +12,9 @@ import { BritishCulture } from './components/sections/BritishCulture/BritishCult
 import { Pronunciation } from './components/sections/Pronunciation/Pronunciation';
 import { LearningJourney } from './components/sections/LearningJourney/LearningJourney';
 import { MiniQuiz } from './components/sections/MiniQuiz/MiniQuiz';
+import { Benefits } from './components/sections/Benefits/Benefits';
+import { FAQ } from './components/sections/FAQ/FAQ';
+import { Contact } from './components/sections/Contact/Contact';
 import { useSmoothScroll } from './hooks/useSmoothScroll';
 
 export const App: React.FC = () => {
@@ -32,6 +35,9 @@ export const App: React.FC = () => {
         <Pronunciation />
         <LearningJourney />
         <MiniQuiz />
+        <Benefits />
+        <FAQ />
+        <Contact />
       </main>
       <Footer />
       <WhatsAppFloatingCTA />
